@@ -79,25 +79,30 @@ with col2:
 st.markdown("---")
 st.subheader("📊 Feature Importance")
 
-# Feature importance
+st.markdown("---")
+st.subheader("📊 Feature Importance")
+
 features = ["Age", "Attendance", "Marks", "Study Hours", "Parent Income"]
-importance = model.feature_importances_
 
-# Create DataFrame
-df = pd.DataFrame({
-    "Feature": features,
-    "Importance": importance
-}).sort_values(by="Importance", ascending=True)
+try:
+    importance = model.feature_importances_
 
-# Plot
-fig, ax = plt.subplots()
-ax.barh(df["Feature"], df["Importance"])
-ax.set_xlabel("Importance Score")
-ax.set_ylabel("Features")
-ax.set_title("Feature Importance (Model Insight)")
+    df = pd.DataFrame({
+        "Feature": features,
+        "Importance": importance
+    }).sort_values(by="Importance", ascending=True)
 
-st.pyplot(fig)
+    fig, ax = plt.subplots()
+    ax.barh(df["Feature"], df["Importance"])
+    ax.set_xlabel("Importance Score")
+    ax.set_ylabel("Features")
+    ax.set_title("Feature Importance (Model Insight)")
 
+    plt.tight_layout()
+    st.pyplot(fig)
+
+except:
+    st.warning("⚠️ Feature importance not available for this model.")
 # Footer
 st.markdown("---")
 st.markdown("Made with ❤️ by Priyanshu Sharma")
