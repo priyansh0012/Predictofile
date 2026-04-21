@@ -98,9 +98,9 @@ The system not only provides predictions but also explains model behavior and of
 
 
 
-🚀 \*\*Live Demo:\*\* https://your-streamlit-link  
+https://predictofile.streamlit.app
 
-💻 \*\*GitHub Repo:\*\* https://github.com/your-username/predictofile  
+💻 \*\*GitHub Repo:\*\* https://github.com/PRIYANSH0012/predictofile
 
 
 
