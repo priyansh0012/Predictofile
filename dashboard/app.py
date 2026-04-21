@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # ✅ FIRST Streamlit command
-st.set_page_config(page_title="Student Dropout Predictor", page_icon="🎓", layout="wide")
+st.set_page_config(page_title="Student ka Maargdarshak", page_icon="🎓", layout="wide")
 
 # ✅ Styling AFTER config
 st.markdown("""
@@ -29,8 +29,8 @@ with open(model_path, "rb") as f:
     model = pickle.load(f)
 
 # Title
-st.title("🎓 AI-Based Student Dropout Prediction System")
-st.markdown("### Predict whether a student is at risk of dropping out using Machine Learning")
+st.title("🎓 Predictofile - students ka margdarshak")
+st.markdown("### Predict whether a student is at risk of dropping out based on key factors ")
 
 # Sidebar Inputs
 st.sidebar.header("📊 Enter Student Details")
